@@ -2,12 +2,11 @@ import pandas as pd
 import numpy as np
 import copy
 from scipy import spatial
-from typing import Optional
 
 
 def infill(
         df_in: pd.DataFrame,
-        axis: list = ['latitude', 'longitude'],
+        axis: list = ['x', 'y'],
         cols: list = [],
 ) -> pd.DataFrame:
     """
@@ -48,7 +47,7 @@ def infill(
 
 def smoothing(
         df_in: pd.DataFrame,
-        axis: list = ['latitude', 'longitude'],
+        axis: list = ['x', 'y'],
         col: list = [],
         n: int = 500,
         p: int = 0.5,
